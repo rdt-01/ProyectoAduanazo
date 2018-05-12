@@ -5,10 +5,35 @@
  */
 package vistaCategoria;
 
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
 /**
  *
  * @author rdt
  */
-public class PanelBoton_Inf {
-    
+public class PanelBoton_Inf extends JPanel {
+
+    //Attr
+    public JButton btnConfirmar;
+
+    //Constructor
+    public PanelBoton_Inf() {
+        this.initComp();
+    }
+
+    //Funciones
+    private void initComp() {
+
+        //Panel
+        this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+
+        //JButton
+        this.btnConfirmar = new JButton("Siguiente");
+
+        //Add
+        this.add(this.btnConfirmar);
+    }
+
 }

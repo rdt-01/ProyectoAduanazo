@@ -42,7 +42,7 @@ public class VentanaCalculo extends JFrame {
         this.setTitle("Aduanazo");
         this.setSize(350, 189); //w, h
         this.setLocationRelativeTo(null);
-        this.setResizable(true);
+        this.setResizable(false);
         this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
