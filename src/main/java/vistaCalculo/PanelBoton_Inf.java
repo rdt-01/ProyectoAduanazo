@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 public class PanelBoton_Inf extends JPanel {
 
     //Attr
-    private JButton btnCalcular;
+    public JButton btnCalcular;
     private JButton btnLimpiar;
 
     //Constructor
@@ -29,7 +29,6 @@ public class PanelBoton_Inf extends JPanel {
 
         //Panel
         this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
-        
 
         //JButton
         this.btnCalcular = new JButton("Calcular");

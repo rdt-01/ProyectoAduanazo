@@ -6,7 +6,10 @@
 package vistaCalculo;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
 import javax.swing.JFrame;
+
+import modelo.Calculadora;
 
 /**
  *
@@ -18,6 +21,8 @@ public class VentanaCalculo extends JFrame {
     private PanelEntrada_Sup psup;
     private PanelSalida_Cen pcen;
     private PanelBoton_Inf pinf;
+    
+    private Calculadora calc;
 
     //Constructor
     public VentanaCalculo() {
@@ -31,10 +36,11 @@ public class VentanaCalculo extends JFrame {
         this.psup = new PanelEntrada_Sup(2,2);
         this.pcen = new PanelSalida_Cen(2,2);
         this.pinf = new PanelBoton_Inf();
+        this.calc = new Calculadora();
 
         //Propiedades JFrame
         this.setTitle("Aduanazo");
-        this.setSize(380, 255); //w, h
+        this.setSize(350, 189); //w, h
         this.setLocationRelativeTo(null);
         this.setResizable(true);
         this.setLayout(new BorderLayout());
@@ -46,6 +52,11 @@ public class VentanaCalculo extends JFrame {
         this.add(this.pinf, BorderLayout.SOUTH);
 
         //ActionEvents
+          this.pinf.btnCalcular.addActionListener((ActionEvent e) -> {
+              this.psup.setData();
+              System.out.println(this.calc.getValorProducto());
+        });
+          
         //Visibilidad
         this.setVisible(true);
 

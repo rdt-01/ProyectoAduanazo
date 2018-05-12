@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 
+import modelo.Calculadora;
+
 /**
  *
  * @author rdt
@@ -54,6 +56,16 @@ public class PanelEntrada_Sup extends JPanel {
         this.add(this.tfValor);
         this.add(this.jlEnvio);
         this.add(this.tfEnvio);
+    }
+    
+    Calculadora setData() {
+        Calculadora c = new Calculadora(); 
+        int tempValorProd = Integer.parseInt(this.tfValor.getText().trim());  
+        c.setValorProducto(tempValorProd);
+        
+        System.out.println("Valor temp " + tempValorProd + "valor set " + c.getValorProducto());
+        
+        return c;
     }
 
 }
