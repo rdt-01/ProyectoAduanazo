@@ -5,6 +5,9 @@
  */
 package app;
 
+//import vistaCategoria.VentanaCategoria;
+import vistaCalculo.VentanaCalculo;
+
 /**
  *
  * @author rdt
@@ -15,7 +18,8 @@ public class Launcher {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //VentanaCategoria vc = new VentanaCategoria();
+        VentanaCalculo vc = new VentanaCalculo();
     }
     
 }

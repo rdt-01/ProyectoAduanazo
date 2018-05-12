@@ -5,10 +5,55 @@
  */
 package vistaCalculo;
 
+import java.awt.GridLayout;
+import java.awt.TextField;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.TitledBorder;
+
 /**
  *
  * @author rdt
  */
-public class PanelEntrada_Sup {
-    
+public class PanelEntrada_Sup extends JPanel {
+
+    //Attr
+    private TextField tfValor;
+    private TextField tfEnvio;
+    private JLabel jlValor;
+    private JLabel jlEnvio;
+
+    private int fil, col;
+
+    //Constructor
+    public PanelEntrada_Sup(int x, int y) {
+        this.fil = x;
+        this.col = y;
+        this.initComp();
+    }
+
+    //Funciones
+    private void initComp() {
+
+        GridLayout distrib = new GridLayout(this.fil, this.col); //fil, col
+
+        //Panel
+        this.setLayout(distrib);
+        this.setBorder(new TitledBorder("Entrada"));
+
+        //TextField
+        this.tfValor = new TextField();
+        this.tfEnvio = new TextField();
+
+        //JLabel
+        this.jlValor = new JLabel("Valor: ");
+        this.jlEnvio = new JLabel("Envio: ");
+
+        //Add
+        this.add(this.jlValor);
+        this.add(this.tfValor);
+        this.add(this.jlEnvio);
+        this.add(this.tfEnvio);
+    }
+
 }
